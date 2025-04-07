@@ -1,8 +1,12 @@
+import Inicio from "./paginas/inicio";
+import SobreMim from "./paginas/SobreMim";
+
+console.log(window.location);
+
+const pagina = window.location.pathname === "/" ? <Inicio /> : <SobreMim />;
 
 function App() {
-  return (
-    <h1>Olá Mundo</h1>
-  );
+  return pagina;
 }
 
 export default App;
