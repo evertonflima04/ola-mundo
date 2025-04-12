@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import posts from "json/posts.json";
 import PostModelo from "componentes/PostModelo";
-import ReactMarkdown from "react-markdown";
+import Markdown from "markdown-to-jsx";
 
 
 export default function Post() {
@@ -15,12 +15,10 @@ export default function Post() {
     <PostModelo
       fotoCapa={`/assets/posts/${post.id}/capa.png`}
       titulo={post.titulo}
+      
+      children={post.texto}
     >
-
-      <ReactMarkdown>
-        {post.texto}
-      </ReactMarkdown>
-    
+        <Markdown>{post.texto}</Markdown>
     </PostModelo>
   );
 }
