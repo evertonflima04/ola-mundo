@@ -9,7 +9,9 @@ export default function Inicio() {
             <li key={post.id}>
                 <PostCard post={post} />
             </li>
+            
         ))}
       </ul>
+      
   );
 }
