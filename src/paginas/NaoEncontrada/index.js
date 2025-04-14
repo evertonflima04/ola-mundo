@@ -4,7 +4,8 @@ import erro404 from "assets/erro_404.png";
 import { useNavigate } from "react-router-dom";
 
 export default function NaoEncontrada() {
-    const navegar = useNavigate();
+    const navegar = useNavigate();  // // Hook do React Router que permite navegar entre as páginas
+    // // O hook retorna uma função que pode ser chamada para navegar para outra página
 
   return (
     <>
@@ -20,7 +21,8 @@ export default function NaoEncontrada() {
         </p>
 
         <div className={styles.botaoContainer}
-        onClick={()=> navegar(-1)}
+        onClick={()=> navegar(-1)}  // // Volta uma página na pilha de navegação
+        // // O -1 indica que queremos voltar uma página
         >
         
 
